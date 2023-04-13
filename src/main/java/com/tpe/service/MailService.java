@@ -27,18 +27,18 @@ public class MailService implements MessageService {
 
     private Repo repo;
 
-    @Autowired   // Constructor injection - Recommended
+    @Autowired // Constructor injection - Recommended(tek constrctr varsa @Autowired yazmak zorunlu degil)
     public MailService(@Qualifier("fileRepository") Repo repo) {
         this.repo = repo;
     }
 
     @PostConstruct // MailService bu classin constructor'i kullanildiktan hemen sonra calisir
-    public void init(){
+    public void init() {
         System.out.println("MailService objesi uretiliyor");
     }
 
     @PreDestroy // class objesinin yok edilmesinden hemen once bu method calisir
-    public void destroy(){
+    public void destroy() {
         System.out.println("MailService objesi sonlandiriliyor");
     }
 
