@@ -20,13 +20,14 @@ public class MailService implements MessageService {
 
 //    private Repo repo;
 //    @Autowired  // Setter injection
-//    @Qualifier("fileRepository")
+//    @Qualifier("fileRepository") // Autowired ve Qualifier field'in veya setter'in uzerinde olabilir
 //    public void setRepo(Repo repo) {
 //        this.repo = repo;
 //    }
 
     private Repo repo;
 
+    // Autowired sadece constructor'in uzerinde olabilir
     @Autowired // Constructor injection - Recommended(tek constrctr varsa @Autowired yazmak zorunlu degil)
     public MailService(@Qualifier("fileRepository") Repo repo) {
         this.repo = repo;

@@ -18,7 +18,7 @@ public class MyApplication {
         //config classını oku
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
         //config classındaki component scan ile tüm componentleri tarayacak
-        //her component tan bir tane bean oluşturup, context'te hazırda bekletecek
+        //her component tan bir tane bean oluşturup, context'te hazırda bekletecek(aslinda hazir beklemiyor, context.getBean ile olusuyor)
         // bean istedigimizde icerisindeki gerekli bagimliliklari enjekte ederek verir
 
 
